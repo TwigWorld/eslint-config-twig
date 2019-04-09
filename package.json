@@ -1,0 +1,35 @@
+{
+  "name": "eslint-config-twig",
+  "version": "0.0.1",
+  "description": "Twig Education ESLint Config",
+  "keywords": [
+    "javascript",
+    "eslint"
+  ],
+  "main": "index.js",
+  "repository": "git@github.com:TwigWorld/eslint-config-twig.git",
+  "author": "Adam Oliver <mail@adamoliver.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "7",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-compat": "^2.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.11.1"
+  },
+  "peerDependencies": {
+    "babel-eslint": "7",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-compat": "^2.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.11.1"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix"
+  }
+}
