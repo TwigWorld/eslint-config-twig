@@ -8,7 +8,6 @@ module.exports = {
   },
   rules: {
     "indent": [2, 4], // 4 spaces for indentation
-    "react/display-name": [false],
     "react/jsx-indent": [2, 4], // 4 spaces for indentation
     "react/jsx-indent-props": [2, 4], // 4 spaces for indentation
     "max-len": [2, 120], // 120 max line length
@@ -16,7 +15,7 @@ module.exports = {
     "compat/compat": 2,
     "function-paren-newline": ["error", "consistent"],
     "no-underscore-dangle": ["error", { "allow": ["__typename"] }],
-    "no-process-env": "error", // Use / src / js / helpers / getEnv instead
+    "no-process-env": "error", // Use getEnv instead
     "jsx-a11y/anchor-is-valid": ["error", {
         "components": ["Link"],
         "specialLink": ["to"],
