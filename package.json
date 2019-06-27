@@ -10,23 +10,19 @@
   "repository": "git@github.com:TwigWorld/eslint-config-twig.git",
   "author": "Adam Oliver <mail@adamoliver.net>",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "babel-eslint": "7",
-    "eslint": "^4.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-compat": "^2.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.11.1"
   },
+  "devDependencies": {
+    "eslint": "^4.16.0"
+  },
   "peerDependencies": {
-    "babel-eslint": "7",
-    "eslint": "^4.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-compat": "^2.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint": "^4.16.0"
   },
   "scripts": {
     "lint": "eslint .",
