@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-twig",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Twig Education ESLint Config",
   "keywords": [
     "javascript",
