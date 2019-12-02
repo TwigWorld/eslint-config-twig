@@ -23,6 +23,10 @@ module.exports = {
     }],
     "jsx-a11y/label-has-for": "off", // Deprecated and broken in eslint 6.1.0 Airbnb uses label- has - associated - control instead
     "operator-linebreak": ["error", "after"],
+    "no-only-tests/no-only-tests": "error" // Do not allow .only in test files
   },
-  plugins: ["compat"]
+  plugins: [
+    "compat",
+    "no-only-tests"
+  ]
 };
