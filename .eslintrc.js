@@ -1,21 +1,16 @@
 module.exports = {
-    extends: ['airbnb', 'plugin:react/recommended'],
-    parser: 'babel-eslint',
+    extends: ['airbnb', 'plugin:react/recommended', 'plugin:jsx-a11y/recommended', 'plugin:prettier/recommended'],
+    parser: '@babel/eslint-parser',
     env: {
         browser: true,
-        node: true,
         jest: true,
+        node: true,
     },
     rules: {
-        indent: [2, 4], // 4 spaces for indentation
-        'react/jsx-indent': [2, 4], // 4 spaces for indentation
-        'react/jsx-indent-props': [2, 4], // 4 spaces for indentation
-        'max-len': [2, 120], // 120 max line length
-        'class-methods-use-this': 0, // Needed to return JSX from React component methods
         'compat/compat': 2,
-        'function-paren-newline': ['error', 'consistent'],
-        'no-underscore-dangle': ['error', { allow: ['__typename'] }],
-        'no-process-env': 'error', // Use getEnv instead
+        'default-param-last': 0,
+        'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+        'jsx-a11y/anchor-ambiguous-text': ['error'],
         'jsx-a11y/anchor-is-valid': [
             'error',
             {
@@ -24,12 +19,51 @@ module.exports = {
                 aspects: ['noHref'],
             },
         ],
-        'operator-linebreak': ['error', 'after'],
+        'jsx-a11y/label-has-associated-control': [
+            2,
+            {
+                depth: 5,
+            },
+        ],
         'no-only-tests/no-only-tests': 'error',
-        'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+        'no-process-env': 'error', // Use getEnv instead
+        'no-restricted-properties': [
+            2,
+            {
+                object: 'window',
+                property: 'config',
+                message:
+                    'Please pass configuration variables to the MFE via props or React context instead of using global variables',
+            },
+        ],
+        'no-underscore-dangle': ['error', { allow: ['__typename'] }],
+        'react/function-component-definition': [
+            'error',
+            {
+                namedComponents: ['function-declaration', 'arrow-function'],
+                unnamedComponents: ['arrow-function'],
+            },
+        ],
+        'react/jsx-indent-props': [2, 4],
+        'react/jsx-indent': [2, 4],
+        'react/jsx-props-no-spreading': 0,
+        'react/jsx-no-bind': 0,
+        'react/jsx-wrap-multilines': ['error', { declaration: false, assignment: false }],
     },
-    plugins: [
-        'compat',
-        'no-only-tests',
+    overrides: [
+        {
+            files: ['**/*.test.jsx', '**/*.test.js'],
+            rules: {
+                'compat/compat': 0,
+                'react/display-name': 0,
+            },
+        },
     ],
+    plugins: ['compat', 'no-only-tests'],
+    settings: {
+        polyfills: ['promises'],
+        'jsx-a11y': {
+            polymorphicPropName: 'as',
+        },
+    },
 };
