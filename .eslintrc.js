@@ -37,6 +37,17 @@ module.exports = {
             },
         ],
         'no-underscore-dangle': ['error', { allow: ['__typename'] }],
+        'prettier/prettier': [
+            'error',
+            {
+                trailingComma: 'all',
+                tabWidth: 4,
+                semi: true,
+                singleQuote: true,
+                printWidth: 120,
+                arrowParens: 'avoid',
+            },
+        ],
         'react/function-component-definition': [
             'error',
             {
