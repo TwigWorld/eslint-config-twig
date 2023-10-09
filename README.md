@@ -33,7 +33,22 @@
 ]
 ```
 
-6. Now you can manually lint your code by running `yarn lint`
+6. Create a .prettierrc file containing the following:
+
+```
+{
+    "trailingComma": "all",
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 120,
+    "arrowParens": "avoid"
+}
+```
+
+The .prettierrc file is required as editor extensions such as prettier-atom and prettier-vscode will read the .prettierrc file to auto format files.
+
+7. Now you can manually lint your code by running `yarn lint`
 
 ## Settings
 
